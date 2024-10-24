@@ -1,34 +1,26 @@
-package exercise;
-
 import java.util.Scanner;
 
 public class FoodDelivery {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        //broi pileshki menuta
-        int chickenMenu = Integer.parseInt(scanner.nextLine());
-        //broi ribni menuta
-        int fishMenu = Integer.parseInt(scanner.nextLine());
-        //broi vegetarianski menuta
-        int vegetarianMenu = Integer.parseInt(scanner.nextLine());
 
-        //•	Пилешко меню –  10.35 лв.
-        double chickenPrice = chickenMenu * 10.35;
+      int chicken = Integer.parseInt(scanner.nextLine());
+      int fish = Integer.parseInt(scanner.nextLine());
+      int vegetarian = Integer.parseInt(scanner.nextLine());
 
-        //•	Меню с риба – 12.40 лв.
-        double fishPrice = fishMenu * 12.40;
+      double chickenPrice = chicken * 10.35;
+      double fishPrice = fish * 12.40;
+      double vegetarianPrice = vegetarian * 8.15;
 
-        //•	Вегетарианско меню  – 8.15 лв
-        double vegetarianPrice = vegetarianMenu * 8.15;
+      double costs = chickenPrice + fishPrice + vegetarianPrice;
+      double dessert = 0.20 * costs;
 
-        double priceAllMenus = chickenPrice + fishPrice + vegetarianPrice;
+      double sum = costs + dessert + 2.50;
 
-        double priceDessert = priceAllMenus * 0.20;
-
-        double totalPrice = priceAllMenus + priceDessert + 2.50;
-
-        System.out.printf("%.2f", totalPrice);
+        System.out.println(sum);
 
 
 

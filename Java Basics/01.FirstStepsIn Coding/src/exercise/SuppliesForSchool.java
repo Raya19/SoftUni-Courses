@@ -1,27 +1,27 @@
-package exercise;
-
 import java.util.Scanner;
 
-public class SuppliesForSchool {
+public class SuppliesforSchool {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        //•	Брой пакети химикали
-        int penPack = Integer.parseInt(scanner.nextLine());
-        //•	Брой пакети маркери
-        int markerPack = Integer.parseInt(scanner.nextLine());
-        //•	Литри препарат
-        int cleaningLiquid = Integer.parseInt(scanner.nextLine());
-        //•	Процент намаление
-        int discountPercent = Integer.parseInt(scanner.nextLine());
+        int pens = Integer.parseInt(scanner.nextLine());
+        int markers = Integer.parseInt(scanner.nextLine());
+        int detergent = Integer.parseInt(scanner.nextLine());
+        int percentageDiscount = Integer.parseInt(scanner.nextLine());
 
-        double totalPrice = (penPack * 5.80) + (markerPack * 7.20) + (cleaningLiquid * 1.20);
+        double packagePens = pens * 5.80;
+        double packageMarkers = markers * 7.20;
+        double oneLeterDetergent = detergent * 1.20;
 
-        double discountPrice = totalPrice - (totalPrice * discountPercent / 100);
+        double sum = packageMarkers + packagePens + oneLeterDetergent;
 
 
-        System.out.println(discountPrice);
+        double sumWithDiscount = sum - (sum * percentageDiscount / 100);
 
+
+        System.out.println(sumWithDiscount);
 
 
     }

@@ -1,17 +1,18 @@
-package lab;
-
 import java.util.Scanner;
 
 public class ConcatenateData {
+
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
 
-        String firstName = scan.nextLine();
-        String lastName = scan.nextLine();
-        int age = Integer.parseInt(scan.nextLine());
-        String town = scan.nextLine();
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.printf("You are %s %s, a %d-years old person from %s.", firstName, lastName, age, town);
+        String name = scanner.nextLine();
+        String lastName = scanner.nextLine();
+        int age = Integer.parseInt(scanner.nextLine());
+        String town = scanner.nextLine();
+
+        System.out.printf("You are %s %s, a %d-years old person from %s.", name, lastName, age, town);
+
 
     }
 }

@@ -1,26 +1,23 @@
-package exercise;
-
 import java.util.Scanner;
 
 public class FishTank {
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        //daljina
+        Scanner scanner = new Scanner (System.in);
+
         int length = Integer.parseInt(scanner.nextLine());
-        //shirina
         int width = Integer.parseInt(scanner.nextLine());
-        //visochina
         int height = Integer.parseInt(scanner.nextLine());
-        //procent aksesoari
-        double percent = Double.parseDouble(scanner.nextLine());
+        double percentage = Double.parseDouble(scanner.nextLine());
 
-        int ltInCm = length * width * height;
-        double litInDm = ltInCm * 0.001;
+        double volume = length * width * height;
+        double volumeInLeters = volume / 1000;
+        double neededLeters = volumeInLeters * (1 - percentage * 0.01);
 
-        double litresNeeded = litInDm - (litInDm * percent / 100);
+        System.out.println(neededLeters);
 
-        System.out.println(litresNeeded);
+
 
 
 

@@ -1,20 +1,21 @@
-package lab;
-
 import java.util.Scanner;
 
 public class PetShop {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        int countDogs = Integer.parseInt(scanner.nextLine());
-        int countCats = Integer.parseInt(scanner.nextLine());
+        int foodDogs = Integer.parseInt(scanner.nextLine());
+        int foodCats = Integer.parseInt(scanner.nextLine());
 
-        double priceDogs = countDogs * 2.5;
-        double priceCats = countCats * 4;
+        double onePackageDog = foodDogs * 2.50;
+        int onePackageCats = foodCats * 4;
 
-        double totalPrice = priceDogs + priceCats;
+        double costs = onePackageCats + onePackageDog;
 
-        System.out.printf("%.1f lv.", totalPrice);
+        System.out.printf("%.2f lv.", costs);
+
 
     }
 }

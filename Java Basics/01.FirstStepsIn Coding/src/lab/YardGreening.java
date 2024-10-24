@@ -1,24 +1,22 @@
-package lab;
-
 import java.util.Scanner;
 
 public class YardGreening {
+
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
-        double sqMeters = Double.parseDouble(scanner.nextLine());
+        double squareMeters = Double.parseDouble(scanner.nextLine());
 
-        double totalPrice = sqMeters * 7.61;
+        double price = squareMeters * 7.61;
+        double priceWithDiscount = 0.18 * price;
+        double totalPrice = price - priceWithDiscount;
 
-        double discount = totalPrice * 0.18;
+        System.out.printf("The final price is %.2f lv.%n", totalPrice);
+        System.out.printf("The discount is %.2f lv.", priceWithDiscount);
 
 
-        //The final price is: 3432.11 lv.
-        //The discount is: 753.39 lv.
 
-        double finalPriceWithoutDiscount = totalPrice - discount;
 
-        System.out.printf("The final price is: %2f lv.%n", finalPriceWithoutDiscount);
-        System.out.printf("The discount is: %2f lv.", discount);
     }
 }
